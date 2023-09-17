@@ -1,0 +1,10 @@
+{
+  "name": "project-transcendence",
+  "version": "1.0.0",
+  "description": "hello-from-console",
+  "main": "index.js",
+  "scripts": {
+      "start": "node index.js"
+    },
+  "license": "MIT"
+}
