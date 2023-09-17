@@ -1,9 +1,4 @@
 ## WORKING AROUND
-
-* mkdir project-transcendence
-* yarn init
-* create index.js
-* change package.json to add :\   "scripts": {\
-    "start": "node index.js"\
-  },\
-* yarn start
+* sudo docker build -t alvachon/project-transcendence .
+* sudo docker run -it --name project-transcendence alvachon/project-transcendence
+*sudo docker rm -f project-transcendence
