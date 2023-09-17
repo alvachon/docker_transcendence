@@ -14,9 +14,14 @@ WORKDIR /app
 RUN node -v
 RUN npm install -g yarn --force
 RUN yarn -v
+RUN npm install -g typescript --force
+RUN tsc -v
+RUN npm i --save-dev @types/node
 
-COPY main.js ./
+COPY main.ts ./
 COPY package.json ./
 COPY . .
+
+RUN tsc main.ts
 
 CMD ["yarn", "start"]
