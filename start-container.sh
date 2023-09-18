@@ -1,8 +1,17 @@
 #!/bin/bash
 
-CONTAINER_NAME="project-transcendence"
-DOCKER_REPO="alvachon"
+echo "SET ENV FOR DOCKER COMMAND:"
+echo "   BUILD (build image 1rst time)"
+echo "   MAKE  (build container 1rst time)"
+echo "   STOP  (stop container)"
+echo "   START (start container)"
+echo "   DELETE (destroy container)"
 
-docker build -t $DOCKER_REPO/$CONTAINER_NAME .
-docker run -it --name $CONTAINER_NAME $DOCKER_REPO/$CONTAINER_NAME
-docker rm -f $CONTAINER_NAME
+
+
+# -- SET ENV
+export BUILD="docker build -t alvachon/project-transcendence ."
+export MAKE="docker run -it --name project-transcendence alvachon/project-transcendence"
+export STOP="docker stop project-transcendence"
+export START="docker start -i project-transcendence"
+export DELETE="docker rm -f project-transcendence"

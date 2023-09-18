@@ -1,5 +1,5 @@
 ## WORKING AROUND
-* sudo ./start-container.sh
+* source ./start-container.sh
   
 ## NOTE FOR TEAM
 
